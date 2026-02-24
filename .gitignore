@@ -1,8 +1,4 @@
-# Compiled Java classes
-*.class
-
-# Package Files
-*.jar
+# Package Files (but keep project compiled classes and libs)
 *.war
 *.ear
 *.zip
