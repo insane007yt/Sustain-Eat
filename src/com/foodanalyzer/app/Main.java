@@ -1,27 +1,26 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
 package com.foodanalyzer.app;
 
 import com.foodanalyzer.ui.MainFrame;
-import java.awt.Component;
 import java.awt.Insets;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 
 public class Main {
-    public Main() {
-    }
-
     public static void main(String[] args) {
-        setupLookAndFeel();
+        Main.setupLookAndFeel();
         SwingUtilities.invokeLater(() -> {
             try {
                 MainFrame frame = new MainFrame();
                 frame.setVisible(true);
-            } catch (Exception var1) {
-                var1.printStackTrace();
-                JOptionPane.showMessageDialog((Component)null, "Failed to start application: " + var1.getMessage(), "Error", 0);
             }
-
+            catch (Exception e) {
+                e.printStackTrace();
+                JOptionPane.showMessageDialog(null, "Failed to start application: " + e.getMessage(), "Error", 0);
+            }
         });
     }
 
@@ -36,9 +35,9 @@ public class Main {
             UIManager.put("TextComponent.arc", 8);
             UIManager.put("ScrollBar.thumbArc", 999);
             UIManager.put("ScrollBar.thumbInsets", new Insets(2, 2, 2, 2));
-        } catch (Exception var1) {
-            System.err.println("Could not set look and feel: " + var1.getMessage());
         }
-
+        catch (Exception e) {
+            System.err.println("Could not set look and feel: " + e.getMessage());
+        }
     }
 }
