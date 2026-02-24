@@ -1,0 +1,10 @@
+# Exclude vendor, binaries and scripts from language stats
+*.class linguist-vendored
+lib/* linguist-vendored
+*.jar linguist-vendored
+*.ps1 linguist-vendored
+*.bat linguist-vendored
+__MACOSX/ linguist-vendored
+
+# Treat src/ as primary source
+src/** linguist-language=Java
