@@ -43,3 +43,7 @@ __MACOSX/
 # Temporary files
 *.tmp
 *.temp
+
+# Ignore decompiler outputs and local tools
+decompiled-src/
+foodanalyzer/lib/cfr.jar

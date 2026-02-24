@@ -8,3 +8,10 @@ __MACOSX/ linguist-vendored
 
 # Treat src/ as primary source
 src/** linguist-language=Java
+
+# Mark decompiler output and tooling as vendored
+decompiled-src/ linguist-vendored
+foodanalyzer/lib/cfr.jar linguist-vendored
+
+# Ensure repository Java sources use LF
+src/** text eol=lf
